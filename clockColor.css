@@ -1,0 +1,14 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:100");
+
+html, body {
+  height: 100%;
+}
+
+body #txt {
+  position: relative;
+  top: 20%;
+  transition: .5s ease-out;
+  text-align: center;
+  color: white;
+  font: 100px Lato
+}
