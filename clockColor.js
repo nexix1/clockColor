@@ -23,20 +23,21 @@ function time() {
   document.getElementById('txt').innerHTML = hr + ":" + min + ":" + sec + ":" + ms
 
 //had lots of help from James Hwang
-  // if (min % 5 == 0) {
-  // return
-  // }
+  if (min % 5 == 0) {
+    return
+  }
   if (min % 2 == 0) {
     document.body.style.backgroundColor = "grey"
     console.log('even')
-  } else if (min % 2 != 0) {
+  } 
+  else if (min % 2 != 0) {
     document.body.style.backgroundColor = "black"
     console.log('odd')
   } 
 }
 
 function text() {
-  var d = new Date();
+  var d = new Date()
   var m = d.getMinutes()
   var c = ["lightblue", "#red", "#orange", "#purple", "#green"]
   var random = c[Math.floor(Math.random() * c.length)]
@@ -47,14 +48,13 @@ function text() {
 }
 
 function bg() {
-  var d = new Date();
+  var d = new Date()
   var m = d.getMinutes()
   var random = "#" + Math.floor(Math.random() * 16777215).toString(16)
 
   if (m % 5 == 0) {
-    document.getElementById("txt").style.color = random
-    // document.body.style.backgroundColor = random
-    console.log('five');
+    document.body.style.backgroundColor = random
+    console.log('five')
   }
 }  
 setInterval(time, 50)
