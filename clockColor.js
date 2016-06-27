@@ -39,21 +39,21 @@ function time() {
 function text() {
   var d = new Date()
   var m = d.getMinutes()
-  var c = ["lightblue", "#red", "#orange", "#purple", "#green"]
-  var random = c[Math.floor(Math.random() * c.length)]
+  var c = ["#ADD8E6", "#FF0000", "#FFA500", "#800080", "#008000"]
+  var rt = c[Math.floor(Math.random() * c.length)]
   
   if (m == 0) {
-    document.getElementById("txt").style.color = random
+    document.getElementById("txt").style.color = rt
   }
 }
 
 function bg() {
   var d = new Date()
   var m = d.getMinutes()
-  var random = "#" + Math.floor(Math.random() * 16777215).toString(16)
+  var rbg = "#" + Math.floor(Math.random() * 16777215).toString(16)
 
   if (m % 5 == 0) {
-    document.body.style.backgroundColor = random
+    document.body.style.backgroundColor = rbg
     console.log('five')
   }
 }  
