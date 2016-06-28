@@ -39,10 +39,11 @@ function time() {
 function text() {
   var d = new Date()
   var m = d.getMinutes()
+  var s = d.getSeconds()
   var c = ["#ADD8E6", "#FF0000", "#FFA500", "#800080", "#008000"]
   var rt = c[Math.floor(Math.random() * c.length)]
   
-  if (m == 0) {
+  if (m % 60 == 0 && s % 60 == 0) {
     document.getElementById("txt").style.color = rt
   }
 }
