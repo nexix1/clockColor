@@ -51,13 +51,14 @@ function text() {
 function bg() {
   var d = new Date()
   var m = d.getMinutes()
+  var s = d.getSeconds()
   var rbg = "#" + Math.floor(Math.random() * 16777215).toString(16)
 
-  if (m % 5 == 0) {
+  if (m % 5 == 0 && s % 60 == 0) {
     document.body.style.backgroundColor = rbg
     console.log('five')
   }
 }  
 setInterval(time, 50)
 setInterval(text, 1000)
-setInterval(bg, 5000)
+setInterval(bg, 1000)
