@@ -22,7 +22,6 @@ function time() {
 
   document.getElementById('txt').innerHTML = hr + ":" + min + ":" + sec + ":" + ms
 
-//had lots of help from James Hwang
   if (min % 5 == 0) {
     return
   }
